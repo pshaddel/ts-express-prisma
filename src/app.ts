@@ -3,8 +3,13 @@ import cors from 'cors';
 import path from 'path';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import dotenv from 'dotenv';
+import Config from '../config';
+dotenv.config();
+const config = Config();
 
 const app = express();
+
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
@@ -18,8 +23,9 @@ app.use((req:express.Request, res:express.Response, next:express.NextFunction) =
 	next();
 });
 
+console.log("", config)
 app.get('/ping', (req: express.Request, res: express.Response) => {
       res.send('pong');
 })
 
-app.listen(3000);
+app.listen(config.PORT);
