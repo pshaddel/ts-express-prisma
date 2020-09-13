@@ -5,7 +5,9 @@ import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import Config from '../config';
+import createUser from './createUser';
 dotenv.config();
+
 const config = Config();
 
 const app = express();
@@ -23,9 +25,14 @@ app.use((req:express.Request, res:express.Response, next:express.NextFunction) =
 	next();
 });
 
-console.log("", config)
 app.get('/ping', (req: express.Request, res: express.Response) => {
       res.send('pong');
-})
+});
+
+app.post('/user', async (req: express.Request, res: express.Response) => {
+    const result = await createUser()
+	res.json({result});
+});
 
 app.listen(config.PORT);
+console.info("App is listenng on port:", config.PORT)
