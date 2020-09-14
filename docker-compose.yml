@@ -11,3 +11,9 @@ services:
     - ./postgres-data:/var/lib/postgresql/data
     ports:
     - 5432:5432
+  redis:
+    image: 'bitnami/redis:6.0.8'
+    environment:
+      REDIS_PASSWORD: password123
+    ports:
+    - 6379:6379
