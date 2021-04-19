@@ -25,7 +25,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "helmet": "^4.1.1",
+    "helmet": "^4.4.1",
     "sequelize": "^6.3.5",
     "shapely": "^0.2.3"
   },
