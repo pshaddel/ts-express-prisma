@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "watch-tests": "jest --watch",
-    "dev": "tsc-watch --onSuccess 'node ./dist/src/app.js'",
+    "test:watch": "jest --watch",
+    "start:dev": "tsc-watch --onSuccess 'node ./dist/src/app.js'",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
@@ -29,7 +29,6 @@
     "helmet": "^4.5.0",
     "npm-check-updates": "^11.5.1",
     "prisma": "^2.21.2",
-    "sequelize": "^6.6.2",
     "shapely": "^0.2.1"
   },
   "devDependencies": {
