@@ -14,4 +14,4 @@
 
 • `Const` **userRouter**: *Router*
 
-Defined in: [user/user.controller.ts:4](https://github.com/pshaddel/ts-express-prisma-rest/blob/5c56bf0/src/user/user.controller.ts#L4)
+Defined in: [user/user.controller.ts:4](https://github.com/pshaddel/ts-express-prisma-rest/blob/c7f8d65/src/user/user.controller.ts#L4)
