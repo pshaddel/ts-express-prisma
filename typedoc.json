@@ -1,0 +1,7 @@
+{
+    "exclude": ["src/**/*+(test|.spec|.e2e).ts"],
+    "entryPoints": ["src"],
+    "out": "docs",
+    "name": "Centralised Services Middleware",
+    "plugin": "typedoc-plugin-markdown"
+  }
