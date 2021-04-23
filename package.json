@@ -1,5 +1,5 @@
 {
-  "name": "express-ts-sequelize-boilerplate",
+  "name": "ts-express-prisma-rest",
   "version": "1.0.0",
   "description": "A boilerplate for express app using relational database and sequelize",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pshaddel/express-ts-sequelize-boilerplate.git"
+    "url": "git+https://github.com/pshaddel/ts-express-prisma-rest.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pshaddel/express-ts-sequelize-boilerplate/issues"
+    "url": "https://github.com/pshaddel/ts-express-prisma-rest/issues"
   },
-  "homepage": "https://github.com/pshaddel/express-ts-sequelize-boilerplate#readme",
+  "homepage": "https://github.com/pshaddel/ts-express-prisma-rest#readme",
   "dependencies": {
     "@prisma/client": "^2.21.2",
     "cors": "^2.8.5",
