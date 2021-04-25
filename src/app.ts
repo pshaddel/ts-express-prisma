@@ -1,13 +1,8 @@
 import express, { NextFunction, Request, Response } from 'express'
 import cors from 'cors'
-import path from 'path'
 import helmet from 'helmet'
-import dotenv from 'dotenv'
-import Config from '../config'
-import { userRouter } from './user/user.controller'
-
-dotenv.config()
-const config = Config()
+import { config } from '../config'
+import { userRouter } from './user/user.route'
 
 const app = express()
 
@@ -15,7 +10,6 @@ app.use(cors())
 app.use(helmet())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static(path.join(__dirname, 'public')))
 
 app.use((_req: Request, res: Response, next: NextFunction) => {
   res.header('Access-Control-Allow-Origin', '*')
@@ -30,7 +24,11 @@ app.get('/ping', (_req: Request, res: Response) => {
   res.send('pong')
 })
 
-app.post('/user', userRouter)
+app.use(userRouter)
 
-app.listen(config.PORT)
-console.info('App is listenng on port:', config.PORT)
+if (!config.isTestEnvironment) {
+  app.listen(config.port)
+  console.info('App is listenng on port:', config.port)
+}
+
+export { app }

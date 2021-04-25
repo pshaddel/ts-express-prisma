@@ -7,5 +7,5 @@
 ### Modules
 
 - [app](modules/app.md)
-- [user/user.controller](modules/user_user_controller.md)
+- [user/user.route](modules/user_user_route.md)
 - [user/user.service](modules/user_user_service.md)
