@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "helmet": "^4.5.0",
     "npm-check-updates": "^11.5.1",
-    "prisma": "^2.21.2",
+    "prisma": "^2.22.0",
     "shapely": "^0.2.1"
   },
   "devDependencies": {
