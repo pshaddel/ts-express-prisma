@@ -12,16 +12,20 @@
 
 ### createUser
 
-▸ `Const`**createUser**(`user`: { `email`: *string* ; `name`: *string*  }): *Promise*<User\>
+▸ `Const` **createUser**(`user`): `Promise`<`User`\>
 
-#### Parameters:
+#### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `user` | *object* |
-| `user.email` | *string* |
-| `user.name` | *string* |
+| `user` | `Object` |
+| `user.email` | `string` |
+| `user.name` | `string` |
 
-**Returns:** *Promise*<User\>
+#### Returns
 
-Defined in: [user/user.service.ts:3](https://github.com/pshaddel/ts-express-prisma-rest/blob/ed7929e/src/user/user.service.ts#L3)
+`Promise`<`User`\>
+
+#### Defined in
+
+[user/user.service.ts:3](https://github.com/pshaddel/ts-express-prisma-rest/blob/811a292/src/user/user.service.ts#L3)

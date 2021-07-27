@@ -12,6 +12,8 @@
 
 ### userRouter
 
-• `Const` **userRouter**: *Router*
+• `Const` **userRouter**: `Router`
 
-Defined in: [user/user.route.ts:4](https://github.com/pshaddel/ts-express-prisma-rest/blob/ed7929e/src/user/user.route.ts#L4)
+#### Defined in
+
+[user/user.route.ts:4](https://github.com/pshaddel/ts-express-prisma-rest/blob/811a292/src/user/user.route.ts#L4)

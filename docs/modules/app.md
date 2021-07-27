@@ -12,6 +12,8 @@
 
 ### app
 
-• `Const` **app**: *Express*
+• `Const` **app**: `Express`
 
-Defined in: [app.ts:7](https://github.com/pshaddel/ts-express-prisma-rest/blob/ed7929e/src/app.ts#L7)
+#### Defined in
+
+[app.ts:7](https://github.com/pshaddel/ts-express-prisma-rest/blob/811a292/src/app.ts#L7)
