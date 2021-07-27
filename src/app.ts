@@ -27,6 +27,7 @@ app.get('/ping', (_req: Request, res: Response) => {
 app.use(userRouter)
 
 if (!config.isTestEnvironment) {
+  console.log({ listen: config.port })
   app.listen(config.port)
   console.info('App is listening on port:', config.port)
 }

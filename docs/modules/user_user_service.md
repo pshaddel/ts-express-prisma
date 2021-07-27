@@ -24,4 +24,4 @@
 
 **Returns:** *Promise*<User\>
 
-Defined in: [user/user.service.ts:3](https://github.com/pshaddel/ts-express-prisma-rest/blob/f907141/src/user/user.service.ts#L3)
+Defined in: [user/user.service.ts:3](https://github.com/pshaddel/ts-express-prisma-rest/blob/9ec69a2/src/user/user.service.ts#L3)
