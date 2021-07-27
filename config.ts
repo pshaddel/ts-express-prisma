@@ -10,7 +10,6 @@ interface IConfig {
 
 export const initConfig = (): IConfig => {
   const { NODE_ENV, PORT } = process.env
-  console.log({ PORT, NODE_ENV })
   switch (NODE_ENV) {
     case 'development':
       return {
