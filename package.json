@@ -28,7 +28,7 @@
     "@types/helmet": "^4.0.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^4.6.0",
     "npm-check-updates": "^11.8.3",
     "prisma": "^2.28.0",
