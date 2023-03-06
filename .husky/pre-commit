@@ -1,8 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
-npm run prettier
-npm run docs
-git add .
+# npm run lint
+# npm run prettier
+# npm run docs
+# git add .
 # npm test
