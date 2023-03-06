@@ -1,5 +1,6 @@
 # Logs
 postgres-data
+postgres-data-test
 logs
 *.log
 npm-debug.log*

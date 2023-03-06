@@ -4,9 +4,16 @@
   "description": "A boilerplate for express app using relational database and sequelize",
   "main": "index.js",
   "scripts": {
-    "test": "npx prisma db push && jest",
-    "test:watch": "jest --watch",
+    "pretest:watch": "docker-compose -f docker-compose.test.yml up -d",
+    "test:watch": "npx prisma db push && jest --watch --forceExit --detectOpenHandles --runInBand --silent",
+    "posttest:watch": "docker-compose -f docker-compose.test.yml down",
+    "pretest": "docker-compose -f docker-compose.test.yml up -d",
+    "test": "npx prisma db push && jest --forceExit --detectOpenHandles --runInBand --silent",
+    "test:ci": "npx prisma db push && jest --forceExit --detectOpenHandles --runInBand --silent",
+    "posttest": "docker-compose -f docker-compose.test.yml down",
+    "prestart:dev": "docker-compose up -d",
     "start:dev": "tsc-watch --onSuccess 'node ./dist/src/app.js'",
+    "poststart:dev": "docker-compose down",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prepare": "husky install",
@@ -31,7 +38,8 @@
     "express": "^4.18.2",
     "helmet": "^6.0.1",
     "prisma": "^4.11.0",
-    "shapely": "^0.2.3"
+    "shapely": "^0.2.3",
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
@@ -55,10 +63,8 @@
     "supertest": "^6.3.3",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "tsc": "^2.0.4",
     "tsc-watch": "^6.0.0",
     "typedoc": "^0.23.26",
-    "typedoc-plugin-markdown": "^3.14.0",
-    "typescript": "^4.9.5"
+    "typedoc-plugin-markdown": "^3.14.0"
   }
 }
