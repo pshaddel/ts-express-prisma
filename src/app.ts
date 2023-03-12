@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import { config } from "../config";
 import { userRouter } from "./user/user.route";
+import "@total-typescript/ts-reset";
 
 const app = express();
 
