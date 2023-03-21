@@ -1,7 +1,7 @@
 {
     "exclude": ["src/**/*+(test|.spec|.e2e).ts"],
-    "entryPoints": ["src"],
+    "entryPoints": ["src/app.ts"],
     "out": "docs",
-    "name": "Centralised Services Middleware",
+    "name": "TS-EXPRESS-PRISMA",
     "plugin": "typedoc-plugin-markdown"
   }
