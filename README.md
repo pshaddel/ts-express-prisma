@@ -15,7 +15,7 @@ Nodejs and NPM: You can install the latest version [here](https://nodejs.org/en/
 
 docker: Install docker engine from [here](https://docs.docker.com/get-docker/).
 
-# Quick Start
+## Quick Start
 First install dependencies:
 ```bash
 npm install
