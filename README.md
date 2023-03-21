@@ -15,6 +15,20 @@ Nodejs and NPM: You can install the latest version [here](https://nodejs.org/en/
 
 docker: Install docker engine from [here](https://docs.docker.com/get-docker/).
 
+# Quick Start
+First install dependencies:
+```bash
+npm install
+```
+
+And then start the project:
+```bash
+npm run start:dev
+```
+
+Now the service is up and is listening on: `http://127.0.0.1:3001`
+
+
 ## Testing
 We are using [Jest](https://jestjs.io/) as both test library and test runner. For running ts test files we are using [SWC](https://swc.rs/docs/usage/jest) which is a lot faster than [TS-NODE](https://github.com/TypeStrong/ts-node). 
 This issue of detecting open handles on tests is open on jest: https://github.com/prisma/prisma/issues/18146
