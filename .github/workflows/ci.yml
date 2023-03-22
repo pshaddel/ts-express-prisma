@@ -20,8 +20,6 @@ jobs:
         run: npm install
       - name: Lint
         run: npm run lint
-      - name: Build Lambda Bundle
-        run: npm run build:production
       - name: Run Test Containers
         run: docker compose -f docker-compose.test.yml up -d
       - name: Sleep for 30s
