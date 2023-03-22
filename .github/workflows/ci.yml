@@ -27,4 +27,4 @@ jobs:
         with:
           time: 30s
       - name: Test
-        run: npm run test
+        run: export DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/postgres && npm run test
