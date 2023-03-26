@@ -28,3 +28,5 @@ jobs:
           time: 30s
       - name: Test
         run: export DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/postgres && npm run test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
