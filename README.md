@@ -48,6 +48,14 @@ npm run test:ci
 
 Be aware that you need `DATABASE_URL` as a env variable on your system for running the project or tests. You can create a `.env` file in Prisma folder to do that.
 
+### Test Coverage Badge
+
+For using your own coverage badge you need to do 3 things:
+- Register in [CodeCov](https://app.codecov.io/)
+- Copy the Secret `CODECOV_TOKEN` value and add it to your project secrets.
+- Copy the Badge address from CodeCov dashboard to README file.
+
+
 ## Linter
 
 For Linting we are using [ESLint](https://eslint.org/)
