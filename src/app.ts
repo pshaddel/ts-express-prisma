@@ -26,6 +26,10 @@ app.get("/ping", (_req: Request, res: Response) => {
 
 app.use(userRouter);
 
+app.use((_, res) => {
+  res.status(404).send("Not found");
+})
+
 if (!config.isTestEnvironment) {
   app.listen(config.port);
   console.info("App is listening on port:", config.port);

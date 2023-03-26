@@ -5,4 +5,8 @@ describe("App", () => {
     const result = await request(app).get("/ping");
     expect(result.text).toBe("pong");
   });
+  it("should get 404 for not found", async () => {
+    const result = await request(app).get("/not-found");
+    expect(result.status).toBe(404);
+  });
 });
