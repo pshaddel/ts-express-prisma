@@ -30,6 +30,8 @@ npm run start:dev
 
 Now the service is up and is listening on: `http://127.0.0.1:3001`
 
+Be aware that you need `DATABASE_URL` as a env variable on your system for running the project or tests. You can create a `.env` file in Prisma folder to do that.
+
 ## Testing
 
 We are using [Jest](https://jestjs.io/) as both test library and test runner. For running ts test files we are using [SWC](https://swc.rs/docs/usage/jest) which is a lot faster than [TS-NODE](https://github.com/TypeStrong/ts-node).
@@ -42,6 +44,8 @@ npm run test
 npm run test:watch
 npm run test:ci
 ```
+
+Be aware that you need `DATABASE_URL` as a env variable on your system for running the project or tests. You can create a `.env` file in Prisma folder to do that.
 
 ## Linter
 
