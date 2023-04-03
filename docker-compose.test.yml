@@ -18,12 +18,12 @@ services:
       - 5432:5432
     networks:
       - TS-EXPRESS-TEST
-  redis:
-    container_name: "ts-express-test-redis"
-    image: "bitnami/redis:6.0.8"
-    environment:
-      REDIS_PASSWORD: password123
-    ports:
-      - 6379:6379
-    networks:
-      - TS-EXPRESS-TEST
+  # redis:
+  #   container_name: "ts-express-test-redis"
+  #   image: "bitnami/redis:6.0.8"
+  #   environment:
+  #     REDIS_PASSWORD: password123
+  #   ports:
+  #     - 6379:6379
+  #   networks:
+  #     - TS-EXPRESS-TEST
