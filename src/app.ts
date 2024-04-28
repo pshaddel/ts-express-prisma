@@ -4,6 +4,9 @@ import helmet from "helmet";
 import { config } from "../config";
 import { userRouter } from "./user/user.route";
 import "@total-typescript/ts-reset";
+import dotenv from "dotenv";
+
+dotenv.config({ path: "../.env" });
 
 const app = express();
 
@@ -28,7 +31,7 @@ app.use(userRouter);
 
 app.use((_, res) => {
   res.status(404).send("Not found");
-})
+});
 
 if (!config.isTestEnvironment) {
   app.listen(config.port);
