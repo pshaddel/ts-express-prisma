@@ -8,7 +8,7 @@
     "test:watch": "npx prisma db push && jest --watch --forceExit --detectOpenHandles --runInBand --silent",
     "posttest:watch": "docker compose -f docker-compose.test.yml down",
     "pretest": "docker compose -f docker-compose.test.yml up -d",
-    "test": "npx prisma db push && jest --forceExit --detectOpenHandles --runInBand --silent",
+    "test": "DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/postgres npx prisma db push && DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/postgres jest --forceExit --detectOpenHandles --runInBand --silent",
     "test:ci": "npx prisma db push && jest --forceExit --detectOpenHandles --runInBand --silent",
     "posttest": "docker compose -f docker-compose.test.yml down",
     "prestart:dev": "docker compose up -d",
