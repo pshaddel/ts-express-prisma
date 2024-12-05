@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/pshaddel/ts-express-prisma-rest#readme",
   "dependencies": {
-    "@prisma/client": "^5.14.0",
+    "@prisma/client": "^5.17.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
