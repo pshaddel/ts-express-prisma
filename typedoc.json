@@ -3,5 +3,5 @@
 	"entryPoints": ["src/app.ts"],
 	"out": "docs",
 	"name": "TS-EXPRESS-PRISMA",
-	"plugin": "typedoc-plugin-markdown"
+	"plugin": ["typedoc-plugin-markdown"]
 }
