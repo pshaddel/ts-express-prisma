@@ -56,20 +56,13 @@ For using your own coverage badge you need to do 3 things:
 - Copy the Badge address from CodeCov dashboard to README file.
 
 
-## Linter
+## Linter and Formatter
 
-For Linting we are using [ESLint](https://eslint.org/)
+For Linting and Formatting we are using [Biome](https://biomejs.dev/)
 
 ```bash
 npm run lint
-```
-
-## Formatter
-
-For Formatting we are using [Prettier](https://prettier.io/).
-
-```bash
-npm run prettier
+npm run format
 ```
 
 ## Git Commit Message
