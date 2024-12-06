@@ -51,25 +51,18 @@ Be aware that you need `DATABASE_URL` as a env variable on your system for runni
 ### Test Coverage Badge
 
 For using your own coverage badge you need to do 3 things:
+
 - Register in [CodeCov](https://app.codecov.io/)
 - Copy the Secret `CODECOV_TOKEN` value and add it to your project secrets.
 - Copy the Badge address from CodeCov dashboard to README file.
 
+## Linter and Formatter
 
-## Linter
-
-For Linting we are using [ESLint](https://eslint.org/)
+For Linting and Formatting we are using [Biome](https://biomejs.dev/)
 
 ```bash
 npm run lint
-```
-
-## Formatter
-
-For Formatting we are using [Prettier](https://prettier.io/).
-
-```bash
-npm run prettier
+npm run format
 ```
 
 ## Git Commit Message
