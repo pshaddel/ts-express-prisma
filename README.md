@@ -9,6 +9,20 @@
 
 <b>A Boilerplate for Express Apps with Prisma</b>
 
+This repo includes some features that are important to me:
+- [ ] using Typescript
+- [ ] Hot Reload in Development
+- [ ] Using Docker for running Database
+- [ ] Using a ORM/ODM for the Database(in this case Prisma)
+- [ ] Linting
+- [ ] Formatter
+- [ ] Validator
+- [ ] Testing(Both unit and integration)
+- [ ] Using Conventional Commit(Forced by commitlint package)
+- [ ] Having Git Hooks(using Husky => pre/post)
+- [ ] Documentation(use TS Docs, JS Docs and typedoc package to turn them to html pages)
+- [ ] Having a proper pipeline(install, build, lint, format, test)
+
 ## Prerequisites
 
 Nodejs and NPM: You can install the latest version [here](https://nodejs.org/en/download)
