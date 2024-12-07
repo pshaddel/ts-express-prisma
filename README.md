@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pshaddel/ts-express-prisma-rest/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/pshaddel/ts-express-prisma-rest/compare)
 
-# TS Express Prisma
+# Nodejs Typscript Express Prisma Postgres [Sample Backend Template]
 
 <b>A Boilerplate for Express Apps with Prisma</b>
 
