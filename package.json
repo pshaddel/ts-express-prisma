@@ -37,7 +37,7 @@
 		"dotenv": "^16.4.5",
 		"express": "^5.0.1",
 		"helmet": "^6.2.0",
-		"typescript": "^5.7.2",
+		"typescript": "^5.8.2",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
