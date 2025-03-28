@@ -83,10 +83,6 @@ npm run format
 
 It is forced to commit [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) to this repository. For commiting in this style you can use this [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) or use this [CLI Tool](https://github.com/pshaddel/homebrew-conventionalcommit) that I implemented.
 
-### How to Disable it?
-
-Got to `.husky/commit-msg` and comment the line that checks commit message. You can also remove these two packagees if you do not want to have a standard on commit messages: `"@commitlint/cli": "^17.4.4"`, `"@commitlint/config-conventional": "^17.4.4"`
-
 ## Documents
 
 Add your documents as TS comments in your project and then run this command for generating `.MD` files in `docs` folder:

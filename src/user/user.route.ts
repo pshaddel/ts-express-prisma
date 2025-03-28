@@ -1,12 +1,15 @@
-import express, { type Request, type Response } from "express";
+import express from "express";
+import { Router } from "express";
 import { createUser, userCreationValidator } from "./user.service";
 
-const userRouter = express.Router();
 
-userRouter.post("/users", async (req: Request, res: Response) => {
+const userRouter = Router();
+
+userRouter.post("/users", async (req, res): Promise<void> => {
 	const result = await userCreationValidator.safeParseAsync(req.body);
 	if (!result.success) {
-		return res.status(400).json(result.error);
+		res.status(400).json(result.error);
+		return;
 	}
 	const user = result.data;
 	const createdUser = await createUser(user);
