@@ -12,7 +12,7 @@
 		"test:ci": "npx prisma db push && jest --forceExit --detectOpenHandles --runInBand --silent",
 		"posttest": "docker compose -f docker-compose.test.yml down",
 		"prestart:dev": "docker compose up -d",
-		"start:dev": "tsc-watch --onSuccess 'node ./dist/src/app.js'",
+		"start:dev": "tsc-watch --onSuccess 'node --env-file=.env ./dist/src/app.js'",
 		"poststart:dev": "docker compose down",
 		"build": "tsc",
 		"lint": "biome lint",
@@ -34,7 +34,6 @@
 	"dependencies": {
 		"@prisma/client": "^6.5.0",
 		"cors": "^2.8.5",
-		"dotenv": "^16.4.7",
 		"express": "^5.0.1",
 		"helmet": "^8.1.0",
 		"typescript": "^5.8.2",
