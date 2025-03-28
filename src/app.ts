@@ -4,8 +4,19 @@ import helmet from "helmet";
 import { config } from "../config";
 import { userRouter } from "./user/user.route";
 import "@total-typescript/ts-reset";
+import client from "prom-client";
 
 const app = express();
+
+const collectDefaultMetrics = client.collectDefaultMetrics;
+collectDefaultMetrics();
+
+const metricsEndpoint = "/metrics";
+app.get(metricsEndpoint, async (_req: Request, res: Response) => {
+	res.set("Content-Type", client.register.contentType);
+	res.end(await client.register.metrics());
+});
+
 
 app.use(cors());
 app.use(helmet());

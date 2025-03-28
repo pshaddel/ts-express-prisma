@@ -1,4 +1,3 @@
-import express from "express";
 import { Router } from "express";
 import { createUser, userCreationValidator } from "./user.service";
 

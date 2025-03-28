@@ -44,4 +44,28 @@ services:
   #     - 6379:6379
   #   networks:
   #     - TS-EXPRESS
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus:/etc/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - TS-EXPRESS
 
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      # - ./grafana_data:/var/lib/grafana
+      # - ./grafana/dashboards/node_dashboard.json:/var/lib/grafana/dashboards/node_dashboard.json
+      # - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yml
+      - ./grafana/grafana_data_source.yml:/etc/grafana/provisioning/datasources/grafana_data_source.yml
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    networks:
+      - TS-EXPRESS

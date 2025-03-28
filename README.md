@@ -23,6 +23,7 @@ This repo includes some features that are important to me:
 - [ ] Having Git Hooks(using Husky => pre/post)
 - [ ] Documentation(use TS Docs, JS Docs and typedoc package to turn them to html pages)
 - [ ] Having a proper pipeline(install, build, lint, format, test)
+- [ ] Monitoring using Prometheus and Grafana
 
 ## Prerequisites
 
@@ -81,6 +82,11 @@ For Linting and Formatting we are using [Biome](https://biomejs.dev/)
 npm run lint
 npm run format
 ```
+
+## Monitoring using Prometheus and Grafana
+
+Promettheus is available on port: `9090` and Grafana is available on port: `3000`. By default Prometheus is added as a datasource to Grafana. For creating a new dashboard, login to Grafana and add a new dashboard and use Prometheus as the datasource.
+You can find the default one here: `./grafana/node_dashboard.json`
 
 ## Git Commit Message
 
