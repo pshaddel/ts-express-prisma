@@ -6,6 +6,23 @@ networks:
     driver: bridge
 
 services:
+  app:
+    container_name: ts-express-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    command: ["tsc-watch", "--onSuccess", "node --env-file=.env ./dist/src/app.js"]
+    depends_on:
+      - postgres
+    networks:
+      - TS-EXPRESS
   postgres:
     container_name: "ts-express-postgres"
     image: postgres:15.2
@@ -27,3 +44,4 @@ services:
   #     - 6379:6379
   #   networks:
   #     - TS-EXPRESS
+

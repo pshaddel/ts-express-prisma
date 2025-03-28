@@ -10,6 +10,7 @@
 <b>A Boilerplate for Express Apps with Prisma</b>
 
 This repo includes some features that are important to me:
+
 - [ ] using Typescript
 - [ ] Hot Reload in Development
 - [ ] Using Docker for running Database
@@ -39,8 +40,10 @@ npm install
 
 And then start the project:
 
+The App is running inside a docker container, it supports hot reload.
+
 ```bash
-npm run start:dev
+docker compose up
 ```
 
 Now the service is up and is listening on: `http://127.0.0.1:3001`
