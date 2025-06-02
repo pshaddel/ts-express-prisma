@@ -8,16 +8,34 @@ networks:
 services:
   postgres:
     container_name: "ts-express-test-postgres"
-    image: postgres:15.2
+    image: postgres:17.5
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
     volumes:
       - ./postgres-data-test:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
     networks:
       - TS-EXPRESS-TEST
+  app:
+    container_name: "ts-express-test-app"
+    build:
+      context: .
+      dockerfile: Test_Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+      - FORCE_COLOR=true
+    networks:
+      - TS-EXPRESS-TEST
+    command: >
+      sh -c "
+        npx prisma db push &&
+        npx jest --forceExit --detectOpenHandles --runInBand --silent
+      "
+    volumes:
+      - .:/app
+      - /app/node_modules
   # redis:
   #   container_name: "ts-express-test-redis"
   #   image: "bitnami/redis:6.0.8"

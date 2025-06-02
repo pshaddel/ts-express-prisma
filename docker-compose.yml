@@ -18,6 +18,7 @@ services:
       - "3001:3001"
     environment:
       - NODE_ENV=development
+      - FORCE_COLOR=true
     command: ["tsc-watch", "--onSuccess", "node --env-file=.env ./dist/src/app.js"]
     depends_on:
       - postgres
@@ -25,10 +26,11 @@ services:
       - TS-EXPRESS
   postgres:
     container_name: "ts-express-postgres"
-    image: postgres:15.2
+    image: postgres:17.5
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
+      FORCE_COLOR: true
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
     ports:

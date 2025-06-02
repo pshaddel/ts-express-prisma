@@ -17,7 +17,6 @@ app.get(metricsEndpoint, async (_req: Request, res: Response) => {
 	res.end(await client.register.metrics());
 });
 
-
 app.use(cors());
 app.use(helmet());
 app.use(express.json());

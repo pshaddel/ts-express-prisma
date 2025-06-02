@@ -16,7 +16,7 @@ describe("User Service", () => {
 			//Act
 			const result = await request(app).post(endpoint).send({
 				name: "testUser",
-				email: "testUser@email.com",
+				email: "testUser@email.com"
 			});
 			//Assert
 			expect(result.body.name).toBe("testUser");
