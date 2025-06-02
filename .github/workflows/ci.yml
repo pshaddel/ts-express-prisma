@@ -22,11 +22,27 @@ jobs:
         run: npm run lint
       - name: Run Test Containers
         run: docker compose -f docker-compose.test.yml up -d
-      - name: Sleep for 30s
-        uses: juliangruber/sleep-action@v1
-        with:
-          time: 30s
-      - name: Test
-        run: export DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/postgres && npx prisma generate && npm run test -- --coverage
+      - name: Wait for test container to finish
+        run: |
+          echo "Waiting for tests to complete..."
+          while [ "$(docker inspect --format='{{.State.Running}}' ts-express-test-app 2>/dev/null)" == "true" ]; do
+            echo "Tests still running..."
+            sleep 4
+          done
+          echo "Tests completed!"
+      - name: Check Test Results
+        run: |
+          EXIT_CODE=$(docker inspect --format='{{.State.ExitCode}}' ts-express-test-app)
+          echo "Container exited with code $EXIT_CODE"
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "Tests failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+          echo "Tests passed successfully!"
+      # - name: Sleep for 30s
+      #   uses: juliangruber/sleep-action@v1
+      #   with:
+      #     time: 30s
+      # - name: Check Test Results
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
